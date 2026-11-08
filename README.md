@@ -1,6 +1,3 @@
-# desafio
-Entrega de desafio
-
 # 🛡️ Entrega do Desafio
 
 ## 🛠️ Pré-requisitos
@@ -78,7 +75,26 @@ Entrega de desafio
         -Password: senha_encontrada
      ```
 
-    3. Acesso via login(WEB Dvwa) via navegador:
+    3. Acesso via login(SMB):
     ```smbclient -L //IP_ALVO -U user_encontrado    
     -Password: senha_encontrada
     ```
+
+## 💻 Mitigação de falhas 
+
+    Antes de tudo, o admin responsável pelo ambiente digital deve se perguntar se a máquina precisa ou não ter o serviço habilitado ou instalado, e caso tenha
+    essa necessidade, deve-se configurar um firewall e antivírus na mesma.
+
+    1. FTP:
+     Uso de protocolos de FTP mais seguros como o SFTP, usuarios e senhas mais seguras como senhas longas com alphanuméricos e simbolos,
+     mais o uso de certificados para a validação no momento do login.
+
+    2. Acesso via login(WEB Dvwa) via navegador:
+    Uso de Login e senha seguros como anteriormente falado, uso de protocolos de segurança como o https, 
+    uso de token enviado via e-mail pessoal ou telefone(autentica de dois fatores) e 
+    troca de senha a cada x período de tempo determinado pelo admin do ambiente digital ou TI.
+
+    3. Acesso via login(SMB):
+    Novamente, deve-se questionar se há a necessidade do ponto(máquina) compartilhar arquivos ou dispositivos com outros computadores da rede, não havendo,
+    deve-se desabilitar o serviço e filtrar a porta via firewall.
+    Havendo a necessidade, o uso de senhas seguras, antivirus e demais metodos de segurança é bem-vindo.    
